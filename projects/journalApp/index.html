@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Journal - WEBD 154 Assignment #3</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Optional Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/_style.css">
+</head>
+<body>
+	<header>
+		<h1>Journal</h1>
+	</header>
+
+	<div class="container-fluid">
+		<div id="login" class="shown">
+			<form>
+				<input type="text" id="usernameField" placeholder="Username">
+				<input type="password" id="passwordField" placeholder="Password">
+				<input type="button" id="loginButton" class="btn btn-default" value="Login">
+				<input type="button" id="signupButton" class="btn btn-default" value="Signup">
+			</form>
+		</div>
+		
+		<div class="subheader clearfix">
+			<div id="welcomeMessage" class="hidden col-md-11"> 
+				<h2 id="message">Welcome User</h2>
+			</div>
+
+			<div id="logout" class="container-fluid hidden col-md-1">
+				<input type="button" id="logoutButton" class="btn btn-default" value="Logout">
+			</div>
+		</div>
+
+		<div id="sectionTitles" class="container-fluid hidden clearfix">
+			<h2 class="col-md-2">My Journals</h2>
+			<h2 class="col-md-3">Journal Entries</h2>
+			<h2 class="col-md-7">Entry Content</h2>
+		</div>
+		
+		<div id="main" class="container-fluid">
+			<div class="journalsSection col-md-2">
+				<div id="bookmarkedJournals"></div>
+				<div id="myJournalsDiv"></div>
+				<div id="newJournalButton"></div>
+			</div>
+			<div class="entriesSection col-md-3">
+				<div id="bookmarkedEntries"></div>
+				<div id="myEntriesDiv"></div>
+				<div id="newEntryButton"></div>
+			</div>
+			<div class="editEntrySection col-md-7">
+				<div id="newEntryDiv" class="clearfix"></div>
+				<div id="entryDataButton"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- // <script src="js/moment.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+	<script src="js/jquery.noty.packaged.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
