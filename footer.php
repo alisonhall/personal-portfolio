@@ -5,7 +5,7 @@
 				<a href="http://codepen.io/alisonhall/" class="social-icon"><i class="fa fa-codepen"></i></a>
 				<a href="https://github.com/alisonhall" class="social-icon"><i class="fa fa-github-square"></i></a>
 				<a href="https://www.pinterest.com/alison2351/" class="social-icon"><i class="fa fa-pinterest-square"></i></a>
-				<p>&copy; 2016 Alison Hall.</p>
+				<p>&copy; <?php echo date("Y") ?> Alison Hall.</p>
 			</footer>
 		</div>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

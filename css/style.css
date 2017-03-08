@@ -1,0 +1,396 @@
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url("../fonts/CaviarDreams-webfont.eot");
+  src: url("../fonts/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/CaviarDreams-webfont.woff") format("woff"), url("../fonts/CaviarDreams-webfont.ttf") format("truetype"), url("../fonts/CaviarDreams-webfont.svg#caviar_dreamsregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Big John';
+  src: url("../fonts/BIGJOHN.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Slim Joe';
+  src: url("../fonts/Slim Joe.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**********************************
+GENERAL
+***********************************/
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**********************************
+HEADING and NAVIGATION
+***********************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+  margin-bottom: 60px;
+  z-index: 5;
+  background: rgba(89, 65, 153, 0.7);
+  color: #FFFFFF;
+}
+
+header a:link,
+header a:visited {
+  color: #FFFFFF;
+}
+
+header #logo {
+  font-family: 'Caviar Dreams', 'Lato', sans-serif;
+  float: left;
+  margin: 0;
+  margin-left: 5%;
+  text-align: left;
+  width: 45%;
+  font-size: 2.5em;
+}
+
+header nav {
+  background: none;
+  float: right;
+  font-size: 1.125em;
+  margin-right: 5%;
+  text-align: right;
+  width: 45%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav a {
+  font-weight: 800;
+  padding: 15px 10px;
+}
+
+@media screen and (max-width: 686px) {
+  header #logo {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
+  nav {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #36AD6A;
+    width: 100%;
+  }
+  .mainNav a {
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+  .mainNav li {
+    padding: 0 3%;
+    margin: 10px 0 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+/**********************************
+FOOTER
+***********************************/
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #AAA;
+  background: #594199;
+}
+
+.social-icon {
+  margin: 0 5px;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.social-icon .fa {
+  font-size: 3em;
+  color: #AAA;
+}
+
+/**********************************
+CONTENT
+***********************************/
+#wrapper {
+  text-align: center;
+}
+
+#wrapper .content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.mainSection {
+  padding: 50px 0;
+  margin: 100px 0;
+  min-height: 400px;
+}
+
+.mainSection h2 {
+  font-family: 'Big John', sans-serif;
+}
+
+.angledSection.topAngle {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.angledSection.topAngle:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: #594199;
+  color: #FFFFFF;
+  top: 0;
+  transform: skewY(5deg);
+  transform-origin: 100% 0;
+}
+
+.angledSection.bottomAngle {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.angledSection.bottomAngle:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: #594199;
+  color: #FFFFFF;
+  bottom: 0;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+}
+
+.angledSection.doubleAngle {
+  position: relative;
+  z-index: 1;
+}
+
+.angledSection.doubleAngle:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: #EEE5F2;
+  top: 0;
+  transform: skewY(5deg);
+  transform-origin: 100% 0;
+}
+
+.angledSection.doubleAngle:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: #EEE5F2;
+  bottom: 0;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+}
+
+.angledPicture {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.angledPicture:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: #594199;
+  color: #FFFFFF;
+  bottom: 0;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+}
+
+.angledPicture .backgroundImage {
+  background: url("../images/winterstorm.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 500px;
+}
+
+.angledPicture .backgroundImage:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: auto;
+  height: 150%;
+  bottom: 0;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+}
+
+.angledPicture:after {
+  height: 150%;
+  bottom: 0;
+  z-index: 5;
+  opacity: 0.7;
+}
+
+/**********************************
+INTRODUCTION
+***********************************/
+#introduction {
+  margin-top: 0;
+  padding-top: 0;
+  height: 450px;
+}
+
+#introduction .content {
+  padding-top: 150px;
+}
+
+/**********************************
+WHAT
+***********************************/
+/**********************************
+WORK
+***********************************/
+#work .project {
+  position: relative;
+  display: inline-block;
+}
+
+#work .project .details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#work .project:hover img {
+  opacity: 0.6;
+}
+
+#work .project:hover .details {
+  display: block;
+}
+
+#work .project img {
+  max-width: 200px;
+}
+
+/**********************************
+ABOUT
+***********************************/
+#about p {
+  text-align: left;
+}
+
+/**********************************
+CONTACT
+***********************************/
+#contact {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: #594199;
+}
+
+#contact:after {
+  background: none;
+}
+
+#contact a:link,
+#contact a:visited {
+  color: #FFFFFF;
+}
+
+/**********************************
+CLEARFIX
+***********************************/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
