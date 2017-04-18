@@ -25,7 +25,7 @@ IMAGE GALLERY
 
     &.architrave {
       .image1 {
-        background-image: url("../images/architraveDesign/old/home.jpg");
+        background-image: url("../images/architrave/old/home.jpg");
       }
     }
 
@@ -37,7 +37,16 @@ IMAGE GALLERY
 
     &.codeassist {
       .image1 {
-        // background-image: url("../images/architraveDesign/old/home.jpg");
+        background-image: url("../images/codeassist/Group5_PitchDocument.jpg");
+      }
+      .image2 {
+        background-image: url("../images/codeassist/Feature Map ver.2.jpg");
+      }
+      .image3 {
+        background-image: url("../images/codeassist/mockups_Page_01.jpg");
+      }
+      .image4 {
+        background-image: url("../images/codeassist/mockups_Page_08.jpg");
       }
     }
 
@@ -49,7 +58,7 @@ IMAGE GALLERY
 
     &.iot {
       .image1 {
-        // background-image: url("../images/architraveDesign/old/home.jpg");
+        background-image: url("../images/iot/flora_watch_0.jpg");
       }
     }
 
@@ -61,13 +70,13 @@ IMAGE GALLERY
 
     &.restaurant {
       .image1 {
-        background-image: url("../images/restaurantDesign/sketches/IMG_0001.jpg");
+        background-image: url("../images/restaurant/sketches/IMG_0001.jpg");
       }
       .image2 {
-        background-image: url("../images/restaurantDesign/w/1.jpg");
+        background-image: url("../images/restaurant/w/1.jpg");
       }
       .image3 {
-        background-image: url("../images/restaurantDesign/m/1.jpg.jpg");
+        background-image: url("../images/restaurant/m/1.jpg.jpg");
       }
     }
   }
@@ -85,11 +94,11 @@ IMAGE GALLERY
 
     &.architrave {
       .image1 {
-        background-image: url("../images/architraveDesign/Portfolio    New Homes  Hoggs Hollow Tradition.jpg");
+        background-image: url("../images/architrave/Portfolio    New Homes  Hoggs Hollow Tradition.jpg");
       }
 
       .image2 {
-        background-image: url("../images/architraveDesign/Portfolio    Renovations   Etobicoke.jpg");
+        background-image: url("../images/architrave/Portfolio    Renovations   Etobicoke.jpg");
       }
     }
 
@@ -101,7 +110,7 @@ IMAGE GALLERY
 
     &.codeassist {
       .image1 {
-        // background-image: url("../images/architraveDesign/old/home.jpg");
+        background-image: url("../images/codeassist/Screenshot 3.jpg");
       }
     }
 
@@ -113,7 +122,7 @@ IMAGE GALLERY
 
     &.iot {
       .image1 {
-        // background-image: url("../images/architraveDesign/old/home.jpg");
+        background-image: url("../images/iot/flora_watch_0.jpg");
       }
     }
 
@@ -125,7 +134,7 @@ IMAGE GALLERY
 
     &.restaurant {
       .image1 {
-        background-image: url("../images/restaurantDesign/m/1.jpg");
+        background-image: url("../images/restaurant/m/1.jpg");
       }
     }
   }
@@ -139,26 +148,27 @@ IMAGE GALLERY
       width: 200px;
     	height: 200px;
       background-size: cover;
+      background-position: 50% 50%;
     }
 
     .hobbies1 {
-      background-image: url("../images/hobbies1.jpg");
+      background-image: url("../images/hobbies/20170108_104625_31813092890_o.jpg");
     }
 
     .hobbies2 {
-      background-image: url("../images/hobbies2.jpg");
+      background-image: url("../images/hobbies/20161206_070537_30649960013_o.jpg");
     }
 
     .hobbies3 {
-      background-image: url("../images/hobbies3.jpg");
+      background-image: url("../images/hobbies/20161225_181331_31067756833_o.jpg");
     }
 
     .hobbies4 {
-      background-image: url("../images/hobbies4.jpg");
+      background-image: url("../images/hobbies/20170105_093247_31972773992_o.jpg");
     }
 
     .hobbies5 {
-      background-image: url("../images/hobbies5.jpg");
+      background-image: url("../images/hobbies/20170105_093225_31972772862_o.jpg");
     }
   }
 
@@ -184,6 +194,7 @@ IMAGE GALLERY
       width: 100%;
     	height: 300px;
       background-size: cover;
+      background-position: 50% 0%;
     }
 
     &.project1 .image {
@@ -203,7 +214,7 @@ IMAGE GALLERY
     }
 
     &.project5 .image {
-      background-image: url("../images/cnibThumbnail.jpg");
+      background-image: url("../images/cnib/FinalMockup.jpg");
     }
 
     &.project6 .image {
@@ -211,7 +222,7 @@ IMAGE GALLERY
     }
 
     &.project7 .image {
-      background-image: url("../images/restaurantThumbnail.jpg");
+      background-image: url("../images/restaurant/m/1.jpg");
     }
 
 
