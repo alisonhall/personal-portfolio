@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    error_reporting(E_ALL);
+    ini_set('display_errors', '0');
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,7 +20,7 @@
 	</head>
 	<body>
 		<header class="clearfix">
-			<a href="#introduction" id="logo">akh</a>
+			<a href="index.php" id="logo">akh</a>
 			<nav>
 				<ul class="mainNav">
 					<li><a href="#what">What I Do</a></li>

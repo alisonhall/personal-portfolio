@@ -12,6 +12,7 @@
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="script/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 		<script type="text/javascript" src="script/Morphext-2.3.4/dist/morphext.min.js"></script>
+		<!-- <script type="text/javascript" src="script/data.js"></script> -->
 		<script type="text/javascript" src="script/script.js"></script>
 		<!-- <script type="text/javascript" src="script/scriptBubbles.js"></script> -->
 		<!-- <script type="text/javascript" src="script/scriptProjects.js"></script> -->

@@ -1,0 +1,244 @@
+/**********************************
+IMAGE GALLERY
+***********************************/
+
+.imageGallery {
+  padding: .5vw;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+
+  &.process {
+    .image {
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      margin: .5vw;
+      width: 300px;
+    	height: 300px;
+      background-size: cover;
+    }
+
+    &.architrave {
+      .image1 {
+        background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.cnib {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.codeassist {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.gradshow {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.iot {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.leslieville {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.restaurant {
+      .image1 {
+        background-image: url("../images/restaurantDesign/sketches/IMG_0001.jpg");
+      }
+      .image2 {
+        background-image: url("../images/restaurantDesign/w/1.jpg");
+      }
+      .image3 {
+        background-image: url("../images/restaurantDesign/m/1.jpg.jpg");
+      }
+    }
+  }
+
+  &.result {
+    .image {
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      margin: .5vw;
+      width: 300px;
+    	height: 300px;
+      background-size: cover;
+    }
+
+    &.architrave {
+      .image1 {
+        background-image: url("../images/architraveDesign/Portfolio    New Homes  Hoggs Hollow Tradition.jpg");
+      }
+
+      .image2 {
+        background-image: url("../images/architraveDesign/Portfolio    Renovations   Etobicoke.jpg");
+      }
+    }
+
+    &.cnib {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.codeassist {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.gradshow {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.iot {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.leslieville {
+      .image1 {
+        // background-image: url("../images/architraveDesign/old/home.jpg");
+      }
+    }
+
+    &.restaurant {
+      .image1 {
+        background-image: url("../images/restaurantDesign/m/1.jpg");
+      }
+    }
+  }
+
+  &.hobbies {
+    .image {
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      margin: .5vw;
+      width: 200px;
+    	height: 200px;
+      background-size: cover;
+    }
+
+    .hobbies1 {
+      background-image: url("../images/hobbies1.jpg");
+    }
+
+    .hobbies2 {
+      background-image: url("../images/hobbies2.jpg");
+    }
+
+    .hobbies3 {
+      background-image: url("../images/hobbies3.jpg");
+    }
+
+    .hobbies4 {
+      background-image: url("../images/hobbies4.jpg");
+    }
+
+    .hobbies5 {
+      background-image: url("../images/hobbies5.jpg");
+    }
+  }
+
+
+
+  .project {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    margin: .5vw;
+    text-align: center;
+  	position: relative;
+  	cursor: pointer;
+  	perspective: 500px;
+    width: 300px;
+
+    &:hover .details {
+    	transform: translate(-50%, -50%) rotateY(0deg);
+    	opacity: 1;
+    }
+
+    .image {
+      width: 100%;
+    	height: 300px;
+      background-size: cover;
+    }
+
+    &.project1 .image {
+      background-image: url("../images/architraveThumbnail.jpg");
+    }
+
+    &.project2 .image {
+      background-image: url("../images/codeAssistThumbnail.jpg");
+    }
+
+    &.project3 .image {
+      background-image: url("../images/iotThumbnail.jpg");
+    }
+
+    &.project4 .image {
+      background-image: url("../images/gradShowThumbnail.jpg");
+    }
+
+    &.project5 .image {
+      background-image: url("../images/cnibThumbnail.jpg");
+    }
+
+    &.project6 .image {
+      background-image: url("../images/leslievilleThumbnail.jpg");
+    }
+
+    &.project7 .image {
+      background-image: url("../images/restaurantThumbnail.jpg");
+    }
+
+
+
+    .details {
+    	width: 60%;
+    	height: 80%;
+    	padding: 5% 8%;
+    	position: absolute;
+    	content: "";
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%) rotateY(90deg);
+    	transform-origin: 50%;
+    	background: rgba(255,255,255,0.9);
+    	opacity: 0;
+    	transition: all 0.4s ease-in;
+      color: $primaryDarkColour;
+
+      h3 {
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header div { margin: 0; }
+  header { padding: 0; }
+}
