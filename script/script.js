@@ -9,6 +9,7 @@ $(document).ready(function() {
   function parallax() {
   		var scrolled = $(window).scrollTop();
   		$('#backgroundImage').css('top', -(scrolled * 0.15) + 'px');
+      $('#shapes').css('top', -(scrolled * 2) + 'px');
       if (scrolled > 0) {
   				$("header").addClass("smallHeader");
   		} else {
@@ -59,7 +60,7 @@ $(document).ready(function() {
     var randomSize2 = randomIntFromInterval(40, 90);
     var randomOpacity = randomIntFromInterval(40, 80)/100;
     var randomX = randomIntFromInterval(0, 10);
-    var randomY = randomIntFromInterval(60, (pageHeight - 50));
+    var randomY = randomIntFromInterval(60, (3*pageHeight));
 
     var html = '';
     html += '<img class="shape" ';
@@ -73,9 +74,9 @@ $(document).ready(function() {
     html += 'style="'
     html += 'top: ' + randomY + 'px; ';
     if(randomSide == 0) {
-      html += 'left: ' + randomX + '%; ';
+      html += 'left: ' + (randomX - 4) + '%; ';
     } else {
-      html += 'right: ' + randomX + '%; ';
+      html += 'right: ' + (randomX - 4) + '%; ';
     }
     if(randomType == 0) {
       html += 'width: ' + randomSize1 + 'px; ';
@@ -92,7 +93,7 @@ $(document).ready(function() {
     return Math.floor(Math.random()*(max-min+1)+min);
   }
 
-  for (var i = 0; i < 40; i++) {
+  for (var i = 0; i < 60; i++) {
     generateRandomShape();
   }
 
