@@ -1,0 +1,236 @@
+
+@mixin angledCommon() {
+	background: inherit;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	-webkit-backface-visibility: hidden; // for Chrome Windows
+	width: 100%;
+	height: 100%;
+}
+
+@mixin angledTopDown() {
+	top: 0;
+	transform: skewY(5deg);
+	transform-origin: 100% 0;
+}
+
+@mixin angledTopUp() {
+	top: 0;
+	transform: skewY(-5deg);
+	transform-origin: 100% 0;
+}
+
+@mixin angledBottomUp() {
+	top: 0;
+	transform: skewY(-5deg);
+	transform-origin: 100% 0;
+}
+
+@mixin angledBottomDown() {
+	top: 0;
+	transform: skewY(5deg);
+	transform-origin: 100% 0;
+}
+
+@mixin angled($direction, $sides:'bottomAndTop') {
+	position: relative;
+
+	@if $sides == 'topOnly' {
+		@if $direction == 'rightIn' {
+			&:before {
+				@include angledCommon();
+				@include angledTopDown();
+			}
+		} @else {
+			// LAST SECTION
+			&:before {
+				@include angledCommon();
+				@include angledTopUp();
+				transform-origin: 0 0;
+			}
+			&:after {
+				@include angledCommon();
+				height: 100%;
+				top: auto;
+				bottom: 0;
+			}
+		}
+	} @elseif $sides == 'bottomOnly' {
+		@if $direction == 'rightIn' {
+			&:after {
+				@include angledCommon();
+				@include angledBottomUp();
+			}
+		} @else {
+			// FIRST SECTION
+			&:after {
+				@include angledCommon();
+				@include angledBottomDown();
+			}
+		}
+	} @else {
+		@if $direction == 'rightIn' {
+			// 2nd and 4th SECTION
+			&:before {
+				@include angledCommon();
+				@include angledTopDown();
+			}
+			&:after {
+				@include angledCommon();
+				@include angledBottomUp();
+			}
+		} @else {
+			// 3rd SECTION
+			&:before {
+				@include angledCommon();
+				@include angledTopUp();
+				transform-origin: 0 0;
+			}
+			&:after {
+				@include angledCommon();
+				@include angledBottomDown();
+				transform-origin: 0 0;
+			}
+		}
+	}
+}
+
+@mixin backgroundType($backgroundColour, $sides:'bottomAndTop') {
+	@if $backgroundColour == 'darkBackground' {
+		@if $sides == 'topOnly' {
+
+		} @elseif $sides == 'bottomOnly' {
+			&:after {
+				background: $primaryDarkColour;
+			}
+		} @else {
+			&:before,
+			&:after {
+				background: $primaryDarkColour;
+			}
+		}
+		color: $lightTextColour;
+
+	} @elseif $backgroundColour == 'mediumBackground' {
+		@if $sides == 'topOnly' {
+
+		} @elseif $sides == 'bottomOnly' {
+			&:after {
+				background: $secondaryLightColour;
+			}
+		} @else {
+			&:before,
+			&:after {
+				background: $secondaryLightColour;
+			}
+		}
+		color: $darkTextColour;
+	} @elseif $backgroundColour == 'lightBackground' {
+		@if $sides == 'topOnly' {
+
+		} @elseif $sides == 'bottomOnly' {
+			&:after {
+				background: $primaryLightColour;
+			}
+		} @else {
+			&:before,
+			&:after {
+				background: $primaryLightColour;
+			}
+		}
+		color: $darkTextColour;
+	} @elseif $backgroundColour == 'darkBackgroundPicture' {
+		@if $sides == 'topOnly' {
+
+		} @elseif $sides == 'bottomOnly' {
+      // FIRST SECTION
+			&:after {
+        background: $primaryDarkColourWithOpacity;
+			}
+		} @else {
+			&:before,
+			&:after {
+				background: $primaryDarkColourWithOpacity;
+			}
+		}
+		color: $lightTextColour;
+	}
+}
+
+.mainSection:nth-of-type(2n+0) {
+	@include angled(rightIn);
+}
+
+.mainSection:nth-of-type(2n+1) {
+	@include angled(rightOut);
+}
+
+.mainSection:first-of-type {
+	@include angled(rightOut);
+  &:before {
+    height: 0;
+  }
+  &:after {
+    top: -800px;
+    height: 300%;
+  }
+}
+
+.mainSection:last-of-type {
+  padding: 40px 0 10px 0;
+  &:after {
+    height: 300%;
+  }
+}
+
+
+
+.mainSection:nth-of-type(2n+0) {
+    @include backgroundType(lightBackground);
+    .button.icon a {
+      border: 3px solid $primaryDarkColour;
+      color: $darkTextColour;
+      &:hover {
+        border: 3px solid $primaryDarkColourWithOpacity;
+        color: $primaryDarkColourWithOpacity;
+      }
+    }
+}
+.mainSection:nth-of-type(2n+1) {
+    @include backgroundType(mediumBackground);
+    .button.icon a {
+      border: 3px solid $primaryDarkColour;
+      color: $darkTextColour;
+      &:hover {
+        border: 3px solid $primaryDarkColourWithOpacity;
+        color: $primaryDarkColourWithOpacity;
+      }
+    }
+}
+.mainSection:nth-of-type(4n+1) {
+    @include backgroundType(darkBackground);
+    .button.icon a {
+      border: 3px solid $primaryLightColour;
+      color: $lightTextColour;
+      &:hover {
+        border: 3px solid $secondaryLightColour;
+        color: $secondaryLightColour;
+      }
+    }
+}
+.mainSection:first-of-type {
+    @include backgroundType(darkBackgroundPicture, bottomOnly);
+    .button.icon a {
+      border: 3px solid $primaryLightColour;
+      color: $lightTextColour;
+      &:hover {
+        border: 3px solid $secondaryLightColour;
+        color: $secondaryLightColour;
+      }
+    }
+}

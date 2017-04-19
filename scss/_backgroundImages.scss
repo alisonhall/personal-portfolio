@@ -1,0 +1,50 @@
+/**********************************
+BACKGROUNDS
+***********************************/
+
+#backgroundImage {
+	width: 100%;
+	height: 300%;
+	background-blend-mode: overlay;
+	background-size: 100% auto;
+	background-position: 50% 0%;
+	background-color: #ddd;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -5;
+
+	&.homeBackground {
+		background-image: url("../images/winterstorm.jpg");
+		background-position: 50% -10%;
+	}
+
+	&.architraveBackground {
+		background-image: url("../images/architrave/Portfolio    New Homes  Hoggs Hollow Tradition.jpg");
+	}
+
+	&.cnibBackground {
+		background-image: url("../images/cnib/FinalMockup.jpg");
+	}
+
+	&.codeassistBackground {
+		background-image: url("../images/codeassist/Screenshot 3.jpg");
+	}
+
+	&.gradshowBackground {
+		background-image: url("../images/gradshow/2017-04-18_10-53-35.jpg");
+	}
+
+	&.iotBackground {
+		background-image: url("../images/iot/flora_watch_0.jpg");
+	}
+
+	&.leslievilleBackground {
+		background-image: url("../images/leslieville/2017-04-18_10-53-37.jpg");
+	}
+
+	&.restaurantBackground {
+		background-image: url("../images/restaurant/m/1.jpg");
+	}
+}

@@ -59,7 +59,7 @@ $(document).ready(function() {
     var randomSize2 = randomIntFromInterval(40, 90);
     var randomOpacity = randomIntFromInterval(40, 80)/100;
     var randomX = randomIntFromInterval(0, 10);
-    var randomY = randomIntFromInterval(60, pageHeight);
+    var randomY = randomIntFromInterval(60, (pageHeight - 50));
 
     var html = '';
     html += '<img class="shape" ';

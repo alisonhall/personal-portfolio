@@ -6,7 +6,8 @@ $darkTextColour: #000000;
 $lightTextColour: #FFFFFF;
 
 @import "fonts";
-@import "backgrounds";
+@import "backgroundAngles";
+@import "backgroundImages";
 @import "heading";
 @import "footer";
 @import "imageGallery";
@@ -62,13 +63,13 @@ CONTENT
 
 #wrapper {
 	text-align: center;
-	overflow-x: hidden;
+	overflow: hidden;
 	margin: 0;
 	width: 100%;
 
 	.content {
 		width: 70%;
-		margin: 0 auto;
+		margin: 40px auto;
 		z-index: 1;
 
 		.right {
@@ -93,28 +94,28 @@ CONTENT
 			a {
 				padding: 10px 30px;
 
-				&.light {
-					border: 3px solid $primaryLightColour;
-					color: $primaryLightColour;
-				}
-
-				&.dark {
-					border: 3px solid $primaryDarkColour;
-					color: $primaryDarkColour;
-				}
+				// &.light {
+				// 	border: 3px solid $primaryLightColour;
+				// 	color: $primaryLightColour;
+				// }
+				//
+				// &.dark {
+				// 	border: 3px solid $primaryDarkColour;
+				// 	color: $primaryDarkColour;
+				// }
 			}
 
-			a:hover {
-				&.light {
-					border: 3px solid $secondaryLightColour;
-					color: $secondaryLightColour;
-				}
-
-				&.dark {
-					border: 3px solid $primaryDarkColourWithOpacity;
-					color: $primaryDarkColourWithOpacity;
-				}
-			}
+			// a:hover {
+			// 	&.light {
+			// 		border: 3px solid $secondaryLightColour;
+			// 		color: $secondaryLightColour;
+			// 	}
+			//
+			// 	&.dark {
+			// 		border: 3px solid $primaryDarkColourWithOpacity;
+			// 		color: $primaryDarkColourWithOpacity;
+			// 	}
+			// }
 
 			&.icon a {
 				padding: 50px 30px;
@@ -146,6 +147,7 @@ CONTENT
 	&.bottomSection,
 	&.bottomSection2 {
 		padding: 40px 0 0 0;
+		z-index: -1;
 	}
 }
 
