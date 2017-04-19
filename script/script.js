@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var pageWidth = $("#wrapper").width();
+  var pageHeight = $("#wrapper").height();
+
   $(window).scroll(function(e) {
   		parallax();
   });
@@ -45,7 +48,53 @@ $(document).ready(function() {
 	//     }
 	// });
 
+  var hexagons = ["1.svg", "2.svg", "3.svg", "4.svg"];
+  var circles = ["5.svg", "6.svg", "7.svg", "8.svg"];
 
+  function generateRandomShape() {
+    var randomSide = randomIntFromInterval(0, 1);
+    var randomType = randomIntFromInterval(0, 2);
+    var randomShape = randomIntFromInterval(0, 3);
+    var randomSize1 = randomIntFromInterval(10, 50);
+    var randomSize2 = randomIntFromInterval(40, 90);
+    var randomOpacity = randomIntFromInterval(40, 80)/100;
+    var randomX = randomIntFromInterval(0, 10);
+    var randomY = randomIntFromInterval(60, pageHeight);
+
+    var html = '';
+    html += '<img class="shape" ';
+    if(randomType == 0) {
+      html += 'src="images/shapes/' + circles[randomShape] + '" ';
+    } else {
+      html += 'src="images/shapes/' + hexagons[randomShape] + '" ';
+    }
+
+    html += 'alt="" ';
+    html += 'style="'
+    html += 'top: ' + randomY + 'px; ';
+    if(randomSide == 0) {
+      html += 'left: ' + randomX + '%; ';
+    } else {
+      html += 'right: ' + randomX + '%; ';
+    }
+    if(randomType == 0) {
+      html += 'width: ' + randomSize1 + 'px; ';
+    } else {
+      html += 'width: ' + randomSize2 + 'px; ';
+    }
+    html += 'opacity: ' + randomOpacity + '; ';
+    html += '"/>';
+
+    $("#shapes").append(html);
+  }
+
+  function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+  }
+
+  for (var i = 0; i < 40; i++) {
+    generateRandomShape();
+  }
 
 	//  Apply fancybox to single items
 	$("a.singleImage").fancybox();
