@@ -192,9 +192,9 @@
 
 .mainSection:nth-of-type(2n+0) {
     @include backgroundType(lightBackground);
-    .button.icon a {
+    .button a {
       border: 3px solid $primaryDarkColour;
-      color: $darkTextColour;
+      color: $primaryDarkColour;
       &:hover {
         border: 3px solid $primaryDarkColourWithOpacity;
         color: $primaryDarkColourWithOpacity;
@@ -203,7 +203,7 @@
 }
 .mainSection:nth-of-type(2n+1) {
     @include backgroundType(mediumBackground);
-    .button.icon a {
+    .button a {
       border: 3px solid $primaryDarkColour;
       color: $darkTextColour;
       &:hover {
@@ -214,7 +214,7 @@
 }
 .mainSection:nth-of-type(4n+1) {
     @include backgroundType(darkBackground);
-    .button.icon a {
+    .button a {
       border: 3px solid $primaryLightColour;
       color: $lightTextColour;
       &:hover {
@@ -225,7 +225,7 @@
 }
 .mainSection:first-of-type {
     @include backgroundType(darkBackgroundPicture, bottomOnly);
-    .button.icon a {
+    .button a {
       border: 3px solid $primaryLightColour;
       color: $lightTextColour;
       &:hover {

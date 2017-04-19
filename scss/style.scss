@@ -92,6 +92,10 @@ CONTENT
 		.button {
 			margin: 50px auto;
 
+			&.icon {
+				margin: 20px auto 50px;
+			}
+
 			a {
 				padding: 10px 30px;
 
