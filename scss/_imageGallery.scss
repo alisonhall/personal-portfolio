@@ -220,7 +220,6 @@ IMAGE GALLERY
     margin: .5vw;
     text-align: center;
   	position: relative;
-  	cursor: pointer;
   	perspective: 500px;
     width: 300px;
 
@@ -282,7 +281,7 @@ IMAGE GALLERY
       color: $primaryDarkColour;
 
       h3 {
-        padding-top: 50px;
+        padding-top: 30px;
       }
     }
   }

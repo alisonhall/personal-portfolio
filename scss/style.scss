@@ -98,29 +98,8 @@ CONTENT
 
 			a {
 				padding: 10px 30px;
-
-				// &.light {
-				// 	border: 3px solid $primaryLightColour;
-				// 	color: $primaryLightColour;
-				// }
-				//
-				// &.dark {
-				// 	border: 3px solid $primaryDarkColour;
-				// 	color: $primaryDarkColour;
-				// }
+				cursor: pointer;
 			}
-
-			// a:hover {
-			// 	&.light {
-			// 		border: 3px solid $secondaryLightColour;
-			// 		color: $secondaryLightColour;
-			// 	}
-			//
-			// 	&.dark {
-			// 		border: 3px solid $primaryDarkColourWithOpacity;
-			// 		color: $primaryDarkColourWithOpacity;
-			// 	}
-			// }
 
 			&.icon a {
 				padding: 50px 30px;
@@ -138,8 +117,6 @@ CONTENT
 
 		.responsibility {
 			font-family: 'Lato', sans-serif;
-			// font-weight: 300;
-			// text-transform: uppercase;
 			text-align: center;
 		}
 	}
