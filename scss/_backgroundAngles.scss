@@ -200,6 +200,10 @@
         color: $primaryDarkColourWithOpacity;
       }
     }
+    .contact-info a:link,
+    .contact-info a:visited {
+      color: $darkTextColour;
+    }
 }
 .mainSection:nth-of-type(2n+1) {
     @include backgroundType(mediumBackground);
@@ -211,6 +215,10 @@
         color: $primaryDarkColourWithOpacity;
       }
     }
+    .contact-info a:link,
+    .contact-info a:visited {
+      color: $darkTextColour;
+    }
 }
 .mainSection:nth-of-type(4n+1) {
     @include backgroundType(darkBackground);
@@ -221,6 +229,10 @@
         border: 3px solid $secondaryLightColour;
         color: $secondaryLightColour;
       }
+    }
+    .contact-info a:link,
+    .contact-info a:visited {
+      color: $lightTextColour;
     }
 }
 .mainSection:first-of-type {
